@@ -1,4 +1,4 @@
-import propson, { convertPropsToFlatJson, convertPropsToNestedJson} from '../src';
+import propson, { convertPropsToFlatJson, convertPropsToNestedJson} from 'propson';
 
 propson('examples/*.properties', 'tmp', true);
 

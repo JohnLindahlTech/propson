@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prego": "mkdir -p tmp",
+    "go": "propson nested './*.properties' -d tmp"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "propson": "0.0.1"
+    "propson": "0.0.2"
   }
 }
