@@ -1,0 +1,65 @@
+{
+  "name": "propson",
+  "version": "0.0.1",
+  "description": "Convert .properties to JSON",
+  "main": "lib/propson.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "tdd": "npm run test -- --watch",
+    "test": "ava test/*.test.js",
+    "build": "babel src -d lib",
+    "debug": "babel-node examples/index.js",
+    "precli": "mkdir -p tmp",
+    "cli:flat": "babel-node src/cli.js flat 'examples/*.properties' --dir ./tmp",
+    "cli:nested": "babel-node src/cli.js nested 'examples/*.properties' --dir ./tmp"
+  },
+  "repository": {
+    "url": "git+https://github.com/JohnPhoto/propson.git",
+    "type": "git"
+  },
+  "keywords": [
+    "java",
+    "properties",
+    "json"
+  ],
+  "author": "JohnPhoto <john@johnphoto.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnPhoto/propson/issues"
+  },
+  "homepage": "https://github.com/JohnPhoto/propson#readme",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "plugins": [
+      "import"
+    ]
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "fs-promise": "^1.0.0",
+    "glob-promise": "^3.1.0",
+    "neat-contract": "^1.1.0",
+    "ramda": "^0.23.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-register": "^6.18.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
