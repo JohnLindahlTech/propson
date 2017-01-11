@@ -1,4 +1,7 @@
-# Changlog
+# Changelog
 
-# 0.0.1
-* Possible to parse java.properties into json files.
+# 0.0.3
+* Updated README.md
+
+# 0.0.2
+* First properly working version.
