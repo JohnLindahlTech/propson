@@ -2,7 +2,7 @@
   "name": "propson",
   "version": "0.0.1",
   "description": "Convert .properties to JSON",
-  "main": "lib/propson.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint src/",
     "tdd": "npm run test -- --watch",
@@ -12,6 +12,12 @@
     "precli": "mkdir -p tmp",
     "cli:flat": "babel-node src/cli.js flat 'examples/*.properties' --dir ./tmp",
     "cli:nested": "babel-node src/cli.js nested 'examples/*.properties' --dir ./tmp"
+  },
+  "bin": {
+    "propson": "./lib/cli.js"
+  },
+  "files": {
+    "lib"
   },
   "repository": {
     "url": "git+https://github.com/JohnPhoto/propson.git",
