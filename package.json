@@ -16,9 +16,9 @@
   "bin": {
     "propson": "./lib/cli.js"
   },
-  "files": {
+  "files": [
     "lib"
-  },
+  ],
   "repository": {
     "url": "git+https://github.com/JohnPhoto/propson.git",
     "type": "git"
